@@ -177,15 +177,19 @@ export default function SkillsSection() {
       name: "Prisma",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
     },
+    {
+      name: "Linux",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+    },
   ];
 
 
   const certifications = [
-    "AWS Certified Developer",
-    "Google Cloud Professional",
     "Meta Frontend Developer",
-    "MongoDB Certified Developer",
-    "Docker Certified Associate",
+    "Graphic Designer",
+    "Freelancer",
+    "MERN Stack Developer",
+    "Certified Ethical Hacker",
   ];
 
   useEffect(() => {
