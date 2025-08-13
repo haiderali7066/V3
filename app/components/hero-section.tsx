@@ -55,7 +55,7 @@ export default function HeroSection() {
           <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400 p-1">
             <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
               <img
-                src="/p2.png"
+                src="/p.jpg"
                 alt="Profile"
                 className="w-28 h-28 rounded-full object-cover"
               />
