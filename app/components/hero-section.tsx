@@ -102,7 +102,7 @@ export default function HeroSection() {
           {[
             { icon: Github, url: "https://github.com/haiderali7066" },
             { icon: Linkedin, url: "https://linkedin.com/in/haiderali7066" },
-            { icon: Twitter, url: "https://twitter.com/dr.hadi" },
+            { icon: Twitter, url: "https://x.com/gfx_haider" },
           ].map(({ icon: Icon, url }, index) => (
             <a
               key={index}
