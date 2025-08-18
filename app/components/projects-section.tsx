@@ -13,127 +13,79 @@ export default function ProjectsSection() {
   const [isTransitioning1, setIsTransitioning1] = useState(false);
   const [isTransitioning2, setIsTransitioning2] = useState(false);
 
-  const projects = [
-    {
-      title: "E-Commerce Platform",
-      description:
-        "Full-stack e-commerce solution with real-time inventory management and payment processing.",
-      image: "https://picsum.photos/id/237/400/250",
-      technologies: ["Next.js", "TypeScript", "PostgreSQL", "Stripe"],
-      liveUrl: "#",
-      githubUrl: "#",
-      gradient: "from-blue-500 to-purple-600",
-    },
-    {
-      title: "AI Chat Application",
-      description:
-        "Real-time chat application with AI integration and smart responses.",
-      image: "https://picsum.photos/id/238/400/250",
-      technologies: ["React", "Node.js", "Socket.io", "OpenAI API"],
-      liveUrl: "#",
-      githubUrl: "#",
-      gradient: "from-green-500 to-teal-600",
-    },
-    {
-      title: "Task Management System",
-      description:
-        "Collaborative project management tool with kanban boards and time tracking.",
-      image: "https://picsum.photos/id/239/400/250",
-      technologies: ["Vue.js", "Express.js", "MySQL", "Redis"],
-      liveUrl: "#",
-      githubUrl: "#",
-      gradient: "from-orange-500 to-red-600",
-    },
-    {
-      title: "Cryptocurrency Tracker",
-      description:
-        "Real-time cryptocurrency tracking with portfolio management and price alerts.",
-      image: "https://picsum.photos/id/240/400/250",
-      technologies: ["React Native", "Firebase", "CoinGecko API"],
-      liveUrl: "#",
-      githubUrl: "#",
-      gradient: "from-yellow-500 to-orange-600",
-    },
-    {
-      title: "Social Media Analytics",
-      description:
-        "Comprehensive analytics platform with data visualization and reporting.",
-      image: "https://picsum.photos/id/241/400/250",
-      technologies: ["Angular", "Python", "Django", "D3.js"],
-      liveUrl: "#",
-      githubUrl: "#",
-      gradient: "from-purple-500 to-pink-600",
-    },
-    {
-      title: "IoT Dashboard",
-      description: "Real-time IoT device monitoring and control dashboard.",
-      image: "https://picsum.photos/id/242/400/250",
-      technologies: ["React", "MQTT", "InfluxDB", "Grafana"],
-      liveUrl: "#",
-      githubUrl: "#",
-      gradient: "from-indigo-500 to-blue-600",
-    },
-    {
-      title: "Video Streaming Platform",
-      description:
-        "Netflix-like streaming platform with user authentication and video management.",
-      image: "https://picsum.photos/id/243/400/250",
-      technologies: ["React", "Node.js", "MongoDB", "AWS S3"],
-      liveUrl: "#",
-      githubUrl: "#",
-      gradient: "from-red-500 to-pink-600",
-    },
-    {
-      title: "Food Delivery App",
-      description:
-        "Mobile-first food delivery application with real-time tracking.",
-      image: "https://picsum.photos/id/244/400/250",
-      technologies: ["React Native", "Express.js", "PostgreSQL"],
-      liveUrl: "#",
-      githubUrl: "#",
-      gradient: "from-green-400 to-blue-500",
-    },
-    {
-      title: "Learning Management System",
-      description:
-        "Comprehensive LMS with course creation, progress tracking, and assessments.",
-      image: "https://picsum.photos/id/245/400/250",
-      technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-      liveUrl: "#",
-      githubUrl: "#",
-      gradient: "from-cyan-500 to-purple-500",
-    },
-    {
-      title: "Weather Forecast App",
-      description:
-        "Beautiful weather app with detailed forecasts and location-based alerts.",
-      image: "https://picsum.photos/id/246/400/250",
-      technologies: ["React Native", "OpenWeather API", "Redux"],
-      liveUrl: "#",
-      githubUrl: "#",
-      gradient: "from-blue-400 to-cyan-500",
-    },
-    {
-      title: "Fitness Tracking Platform",
-      description:
-        "Comprehensive fitness tracker with workout plans and progress analytics.",
-      image: "https://picsum.photos/id/247/400/250",
-      technologies: ["Vue.js", "Firebase", "Chart.js", "PWA"],
-      liveUrl: "#",
-      githubUrl: "#",
-      gradient: "from-emerald-500 to-teal-600",
-    },
-    {
-      title: "Real Estate Portal",
-      description:
-        "Modern real estate platform with virtual tours and property management.",
-      image: "https://picsum.photos/id/248/400/250",
-      technologies: ["Next.js", "Prisma", "PostgreSQL", "Mapbox"],
-      liveUrl: "#",
-      githubUrl: "#",
-      gradient: "from-violet-500 to-purple-600",
-    },
-  ];
+    const projects = [
+  {
+    title: "Marketing Website",
+    description:
+      "A sleek and responsive marketing website with smooth animations and modern UI components.",
+    image: "https://marketing-site-pearl-three.vercel.app/preview.png",
+    technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    liveUrl: "https://marketing-site-pearl-three.vercel.app/",
+    githubUrl: "#",
+    gradient: "from-blue-500 to-purple-600",
+  },
+  {
+    title: "E-Commerce Website",
+    description:
+      "Fully functional e-commerce platform with shopping cart, checkout, and responsive design.",
+    image: "https://02-ecommerce-site.vercel.app/preview.png",
+    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    liveUrl: "https://02-ecommerce-site.vercel.app/",
+    githubUrl: "#",
+    gradient: "from-green-500 to-teal-600",
+  },
+  {
+    title: "Business Website",
+    description:
+      "Professional business landing page showcasing services, portfolio, and contact details.",
+    image: "https://haiderali7066.github.io/00Business-site/preview.png",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    liveUrl: "https://haiderali7066.github.io/00Business-site/",
+    githubUrl: "#",
+    gradient: "from-orange-500 to-red-600",
+  },
+  {
+    title: "Fidelity Website",
+    description:
+      "Modern and interactive corporate-style site with smooth scrolling and animations.",
+    image: "https://03-fidelity-site.vercel.app/preview.png",
+    technologies: ["Next.js", "Tailwind CSS"],
+    liveUrl: "https://03-fidelity-site.vercel.app/",
+    githubUrl: "#",
+    gradient: "from-yellow-500 to-orange-600",
+  },
+  {
+    title: "Deployment Test Website",
+    description:
+      "A sample project deployed to demonstrate hosting and frontend performance.",
+    image: "https://deploy-five-livid.vercel.app/preview.png",
+    technologies: ["React", "Tailwind CSS"],
+    liveUrl: "https://deploy-five-livid.vercel.app/",
+    githubUrl: "#",
+    gradient: "from-purple-500 to-pink-600",
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "Personal portfolio showcasing projects, skills, and contact information.",
+    image: "https://haiderali7066.github.io/portfolio/preview.png",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    liveUrl: "https://haiderali7066.github.io/portfolio/",
+    githubUrl: "#",
+    gradient: "from-indigo-500 to-blue-600",
+  },
+  {
+    title: "Traveling Website",
+    description:
+      "A beautifully designed travel-themed landing page with location highlights and gallery.",
+    image: "https://traveling-site-cgpa.vercel.app/preview.png",
+    technologies: ["Next.js", "Tailwind CSS"],
+    liveUrl: "https://traveling-site-cgpa.vercel.app/",
+    githubUrl: "#",
+    gradient: "from-red-500 to-pink-600",
+  },
+];
+
 
   const CARD_WIDTH = 304;
   const TRANSITION_DURATION = 500;

@@ -6,9 +6,13 @@ export default function Footer() {
   const socialLinks = [
     { icon: Github, href: "https://github.com/haiderali7066", label: "GitHub" },
     { icon: Linkedin, href: "https://linkedin.com/in/", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com/dr.hadi", label: "Twitter" },
-    { icon: Mail, href: "mailto:Haideraliqurban7066@gmail.com", label: "Email" },
-  ]
+    { icon: Twitter, href: "https://x.com/gfx_haider", label: "Twitter" },
+    {
+      icon: Mail,
+      href: "mailto:Haideraliqurban7066@gmail.com",
+      label: "Email",
+    },
+  ];
 
   const quickLinks = [
     { name: "Home", href: "#home" },
