@@ -70,14 +70,14 @@ export default function ContactSection() {
                     required
                   />
                 </div>
-                <div>
+                <div className="h-52">
                   <Textarea
                     name="message"
                     placeholder="Your Message"
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-cyan-400 resize-none"
+                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-cyan-400 resize-none h-full"
                     required
                   />
                 </div>

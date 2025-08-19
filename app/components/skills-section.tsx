@@ -324,7 +324,7 @@ export default function SkillsSection() {
               {certifications.map((cert, index) => (
                 <div
                   key={cert}
-                  variant="secondary"
+                  // variant="secondary"
                   className=" bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-white border-cyan-400/30 px-4 py-2 text-sm hover:from-cyan-500/30 hover:to-purple-500/30 transition-all duration-300 rounded-sm "
                   style={{ animationDelay: `${index * 100}ms` }}
                 >

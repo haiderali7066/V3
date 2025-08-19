@@ -1,39 +1,60 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function CompaniesSection() {
   const companies = [
     {
       name: "Social Swirl",
-      logo: "/logos/ss.jpg", // replace with actual hosted logo link
+      logo: "/logos/ss.jpg",
       gradient: "from-pink-500 to-purple-500",
     },
     {
       name: "Trendtial",
-      logo: "/logos/tr.jpg", // replace with actual hosted logo link
+      logo: "/logos/tr.jpg",
       gradient: "from-indigo-500 to-cyan-500",
     },
     {
       name: "Zenyx Solutions",
-      logo: "/logos/zy.jfif", // replace with actual hosted logo link
+      logo: "/logos/zy.jfif",
       gradient: "from-green-500 to-emerald-500",
     },
     {
       name: "Ehunar",
-      logo: "/logos/eh.png", // replace with actual hosted logo link
+      logo: "/logos/eh.png",
       gradient: "from-orange-500 to-red-500",
     },
   ];
 
+  const sectionRef = useRef(null);
+  const [startCount, setStartCount] = useState(false);
 
-  // Counting animation hook
-  const useCountUp = (end, duration) => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStartCount(true);
+          observer.disconnect(); // trigger only once
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const useCountUp = (end, duration, trigger) => {
     const [count, setCount] = useState(0);
+
     useEffect(() => {
+      if (!trigger) return;
       let start = 0;
-      const increment = end / (duration / 16); // ~60fps
+      const increment = end / (duration / 16);
       const timer = setInterval(() => {
         start += increment;
         if (start >= end) {
@@ -42,20 +63,21 @@ export default function CompaniesSection() {
         }
         setCount(Math.floor(start));
       }, 16);
+
       return () => clearInterval(timer);
-    }, [end, duration]);
+    }, [end, duration, trigger]);
+
     return count;
   };
 
-  const projects = useCountUp(50, 1500);
-  const companiesCount = useCountUp(8, 1500);
-  const years = useCountUp(5, 1500);
-  const satisfaction = useCountUp(100, 1500);
+  const projects = useCountUp(50, 1500, startCount);
+  const companiesCount = useCountUp(8, 1500, startCount);
+  const years = useCountUp(5, 1500, startCount);
+  const satisfaction = useCountUp(100, 1500, startCount);
 
   return (
-    <section id="companies" className="py-20 px-4">
+    <section ref={sectionRef} id="companies" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Companies I've Worked With
@@ -66,7 +88,6 @@ export default function CompaniesSection() {
           </p>
         </div>
 
-        {/* Companies grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {companies.map((company, index) => (
             <Card
@@ -92,7 +113,6 @@ export default function CompaniesSection() {
           ))}
         </div>
 
-        {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">
