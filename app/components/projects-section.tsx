@@ -12,7 +12,7 @@ const fullStackProjects = [
     title: "Entrepreneur Web",
     description:
       "A clean and modern marketing website tailored for entrepreneurs, showcasing products and services with responsive design and animations.",
-    image: "/f.png",
+    image: "/projects/f.png",
     technologies: ["React", "Tailwind CSS", "Framer Motion"],
     liveUrl: "https://entrepreneur-web.vercel.app/",
     githubUrl: "https://github.com/haiderali7066/entrepreneur-web",
@@ -22,7 +22,7 @@ const fullStackProjects = [
     title: "Portfolio V3",
     description:
       "Your personal portfolio showcasing featured projects, skills, and contact form with smooth UI/UX animations.",
-    image: "/p.png",
+    image: "/projects/p.png",
     technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
     liveUrl: "https://v3-flame-beta.vercel.app/",
     githubUrl: "https://github.com/haiderali7066/V3",
@@ -32,7 +32,7 @@ const fullStackProjects = [
     title: "Fullstack Blog App",
     description:
       "A full-featured blog platform with authentication, post creation/editing, and MongoDB-backed API. Fully responsive UI and SEO-friendly.",
-    image: "/b.png",
+    image: "/projects/b.png",
     technologies: ["MERN", "JWT", "Cloudinary", "Tailwind CSS"],
     liveUrl: "https://blog-frontend-h7yp.vercel.app/",
     githubUrl: "https://github.com/haiderali7066/BlogFrontend",
@@ -42,7 +42,7 @@ const fullStackProjects = [
     title: "Fullstack Tasker App",
     description:
       "A productivity web app for managing daily tasks, built with MERN stack and JWT auth. Includes user registration, task CRUD, and filters.",
-    image: "/t.png",
+    image: "/projects/t.png",
     technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
     liveUrl: "https://fullstack-tasker-app.vercel.app/",
     githubUrl: "https://github.com/haiderali7066/Fullstack-tasker-app",
@@ -66,7 +66,7 @@ const earlyBuildsProjects = [
     title: "Business Website",
     description:
       "A sleek business landing page featuring services, testimonials, and contact information. Fully responsive with smooth scrolling.",
-    image: "/B2.png",
+    image: "/projects/B2.png",
     technologies: ["HTML", "CSS", "JavaScript"],
     liveUrl: "https://haiderali7066.github.io/00Business-site/",
     githubUrl: "https://github.com/haiderali7066/00Business-site",
@@ -76,7 +76,7 @@ const earlyBuildsProjects = [
     title: "Traveling Website",
     description:
       "A vibrant travel landing page with animated sections, destination highlights, and modern design.",
-    image: "/ts.png",
+    image: "/projects/ts.png",
     technologies: ["Next.js", "Tailwind CSS"],
     liveUrl: "https://traveling-site-cgpa.vercel.app/",
     githubUrl: "https://github.com/haiderali7066/traveling-site",
@@ -86,7 +86,7 @@ const earlyBuildsProjects = [
     title: "Portfolio V2",
     description:
       "An earlier version of my developer portfolio showcasing skills and sample projects using pure HTML/CSS/JS.",
-    image: "/v2.png",
+    image: "/projects/v2.png",
     technologies: ["HTML", "CSS", "JavaScript"],
     liveUrl: "https://haiderali7066.github.io/v2/",
     githubUrl: "https://github.com/haiderali7066/v2",
@@ -96,7 +96,7 @@ const earlyBuildsProjects = [
     title: "Restaurant Website",
     description:
       "Single-page restaurant UI featuring a hero section, menu, and reservation call to action.",
-    image: "/r.png",
+    image: "/projects/r.png",
     technologies: ["HTML", "CSS", "JavaScript"],
     liveUrl: "https://01-restaurant-site.vercel.app/",
     githubUrl: "https://github.com/haiderali7066/01Restaurant-site",
@@ -106,7 +106,7 @@ const earlyBuildsProjects = [
     title: "Marketing Site",
     description:
       "A responsive, modern marketing page built with Vite + React. Includes animations and scroll-based transitions.",
-    image: "/m.png",
+    image: "/projects/m.png",
     technologies: ["React", "Vite", "Tailwind CSS"],
     liveUrl: "https://marketing-site-pearl-three.vercel.app/",
     githubUrl: "https://github.com/haiderali7066/Marketing-site",
@@ -116,7 +116,7 @@ const earlyBuildsProjects = [
     title: "Landing Pages Collection",
     description:
       "A creative set of landing page templates using clean HTML/CSS, built to showcase different styles and layouts.",
-    image: "/l.png",
+    image: "/projects/l.png",
     technologies: ["HTML", "CSS", "JavaScript"],
     liveUrl: "https://deploy-five-livid.vercel.app/",
     githubUrl: "https://github.com/haiderali7066/Landing-pages",
