@@ -76,7 +76,7 @@ const earlyBuildsProjects = [
     title: "Traveling Website",
     description:
       "A vibrant travel landing page with animated sections, destination highlights, and modern design.",
-    image: "/projects/ts.PNG",
+    image: "/projects/tl.PNG",
     technologies: ["Next.js", "Tailwind CSS"],
     liveUrl: "https://traveling-site-cgpa.vercel.app/",
     githubUrl: "https://github.com/haiderali7066/traveling-site",
@@ -96,7 +96,7 @@ const earlyBuildsProjects = [
     title: "Restaurant Website",
     description:
       "Single-page restaurant UI featuring a hero section, menu, and reservation call to action.",
-    image: "/projects/r.PNG",
+    image: "/projects/re.PNG",
     technologies: ["HTML", "CSS", "JavaScript"],
     liveUrl: "https://01-restaurant-site.vercel.app/",
     githubUrl: "https://github.com/haiderali7066/01Restaurant-site",
