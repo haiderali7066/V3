@@ -1,47 +1,51 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { ChevronDown, Github, Linkedin, Twitter } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useEffect, useState } from "react";
+import { ChevronDown, Github, Linkedin, Twitter } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
-  const [text, setText] = useState("")
-  const [textIndex, setTextIndex] = useState(0)
-  const [charIndex, setCharIndex] = useState(0)
-  const [isDeleting, setIsDeleting] = useState(false)
+  const [text, setText] = useState("");
+  const [textIndex, setTextIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
-  const texts = ["Full Stack Developer", "Freelancer"]
-  const typingSpeed = 80
-  const deletingSpeed = 40
-  const pauseBeforeDelete = 2000
-  const pauseBeforeType = 500
+  const texts = ["Full Stack Developer", "Freelancer"];
+  const typingSpeed = 80;
+  const deletingSpeed = 40;
+  const pauseBeforeDelete = 2000;
+  const pauseBeforeType = 500;
 
   useEffect(() => {
     const handleTyping = () => {
-      const currentText = texts[textIndex]
+      const currentText = texts[textIndex];
 
       if (!isDeleting) {
-        setText(currentText.substring(0, charIndex + 1))
-        setCharIndex((prev) => prev + 1)
+        setText(currentText.substring(0, charIndex + 1));
+        setCharIndex((prev) => prev + 1);
 
         if (charIndex + 1 === currentText.length) {
-          setTimeout(() => setIsDeleting(true), pauseBeforeDelete)
+          setTimeout(() => setIsDeleting(true), pauseBeforeDelete);
         }
       } else {
-        setText(currentText.substring(0, charIndex - 1))
-        setCharIndex((prev) => prev - 1)
+        setText(currentText.substring(0, charIndex - 1));
+        setCharIndex((prev) => prev - 1);
 
         if (charIndex === 0) {
-          setIsDeleting(false)
-          setTextIndex((prev) => (prev + 1) % texts.length)
-          setTimeout(() => {}, pauseBeforeType)
+          setIsDeleting(false);
+          setTextIndex((prev) => (prev + 1) % texts.length);
+          setTimeout(() => {}, pauseBeforeType);
         }
       }
-    }
+    };
 
-    const timer = setTimeout(handleTyping, isDeleting ? deletingSpeed : typingSpeed)
-    return () => clearTimeout(timer)
-  }, [charIndex, isDeleting, textIndex, texts])
+    const timer = setTimeout(
+      handleTyping,
+      isDeleting ? deletingSpeed : typingSpeed
+    );
+    return () => clearTimeout(timer);
+  }, [charIndex, isDeleting, textIndex, texts]);
 
   return (
     <section
@@ -51,7 +55,14 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 animate-pulse"></div>
 
       <div className="text-center z-10 max-w-4xl mx-auto px-4">
-        <div className="mb-8 animate-fade-in">
+        {/* Profile Picture */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="mb-8"
+        >
           <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400 p-1">
             <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
               <img
@@ -61,24 +72,52 @@ export default function HeroSection() {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-purple-200 bg-clip-text text-transparent animate-fade-in-up">
+        {/* Name */}
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-purple-200 bg-clip-text text-transparent"
+        >
           Haider Ali
-        </h1>
+        </motion.h1>
 
-        <div className="text-2xl md:text-3xl text-cyan-300 mb-8 h-12 animate-fade-in-up animation-delay-200">
+        {/* Typing Text */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-2xl md:text-3xl text-cyan-300 mb-8 h-12"
+        >
           {text}
           <span className="animate-pulse">|</span>
-        </div>
+        </motion.div>
 
-        <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in-up animation-delay-400">
+        {/* Description */}
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
+        >
           Crafting digital experiences with cutting-edge technologies.
           Passionate about creating scalable, performant, and beautiful
           applications that make a difference.
-        </p>
+        </motion.p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in-up animation-delay-600">
+        {/* Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+        >
           <a href="#projects">
             <Button
               size="lg"
@@ -96,9 +135,16 @@ export default function HeroSection() {
               Download CV
             </Button>
           </a>
-        </div>
+        </motion.div>
 
-        <div className="flex justify-center space-x-6 animate-fade-in-up animation-delay-800">
+        {/* Social Icons */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="flex justify-center space-x-6"
+        >
           {[
             { icon: Github, url: "https://github.com/haiderali7066" },
             { icon: Linkedin, url: "https://linkedin.com/in/haiderali7066" },
@@ -114,12 +160,22 @@ export default function HeroSection() {
               <Icon className="h-6 w-6" />
             </a>
           ))}
-        </div>
+        </motion.div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* Scroll Down Chevron */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+      >
         <ChevronDown className="h-8 w-8 text-cyan-400" />
-      </div>
+      </motion.div>
     </section>
   );
 }

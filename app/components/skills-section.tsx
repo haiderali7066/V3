@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 // import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+
 
 export default function SkillsSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -213,6 +215,12 @@ export default function SkillsSection() {
     <section id="skills" ref={sectionRef} className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Skills & Expertise
@@ -221,119 +229,140 @@ export default function SkillsSection() {
             Mastering the latest technologies to build exceptional digital
             experiences
           </p>
-        </div>
+        </div></motion.div>
 
         {/* Skills Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {Object.entries(skills).map(
-            ([category, skillList], categoryIndex) => (
-              <Card
-                key={category}
-                className="skill-card glass-card glass-shine hover:bg-white/10 transition-all duration-300"
-              >
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-6 text-center bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
-                    {category}
-                  </h3>
-                  <div className="space-y-4">
-                    {skillList.map((skill, index) => (
-                      <div key={skill.name} className="space-y-3">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center space-x-3">
-                            <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center p-1">
-                              <Image
-                                src={skill.logo || placeholderLogo}
-                                alt={skill.name}
-                                width={32}
-                                height={32}
-                                title={skill.name}
-                              />
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {Object.entries(skills).map(
+              ([category, skillList], categoryIndex) => (
+                <Card
+                  key={category}
+                  className="skill-card glass-card glass-shine hover:bg-white/10 transition-all duration-300"
+                >
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold mb-6 text-center bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
+                      {category}
+                    </h3>
+                    <div className="space-y-4">
+                      {skillList.map((skill, index) => (
+                        <div key={skill.name} className="space-y-3">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center space-x-3">
+                              <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center p-1">
+                                <Image
+                                  src={skill.logo || placeholderLogo}
+                                  alt={skill.name}
+                                  width={32}
+                                  height={32}
+                                  title={skill.name}
+                                />
+                              </div>
+                              <span className="text-white font-medium text-sm">
+                                {skill.name}
+                              </span>
                             </div>
-                            <span className="text-white font-medium text-sm">
-                              {skill.name}
+                            <span className="text-cyan-400 text-xs">
+                              {skill.level}%
                             </span>
                           </div>
-                          <span className="text-cyan-400 text-xs">
-                            {skill.level}%
-                          </span>
+                          <div className="w-full bg-gray-700 rounded-full h-1.5 overflow-hidden">
+                            <div
+                              className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`}
+                              style={{
+                                width: `${skill.level}%`,
+                                animationDelay: `${
+                                  categoryIndex * 200 + index * 100
+                                }ms`,
+                              }}
+                            ></div>
+                          </div>
                         </div>
-                        <div className="w-full bg-gray-700 rounded-full h-1.5 overflow-hidden">
-                          <div
-                            className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`}
-                            style={{
-                              width: `${skill.level}%`,
-                              animationDelay: `${
-                                categoryIndex * 200 + index * 100
-                              }ms`,
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            )
-          )}
-        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              )
+            )}
+          </div>
+        </motion.div>
 
         {/* Technologies Showcase */}
-        <Card className="skill-card glass-card glass-shine mb-8">
-          <CardContent className="p-8">
-            <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
-              Technologies I Work With
-            </h3>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <Card className="skill-card glass-card glass-shine mb-8">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
+                Technologies I Work With
+              </h3>
 
-            <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-10 gap-4">
-              {[...skills["Tech Stack (MERN)"], ...extraTechnologies]
-                .filter(
-                  (tech, index, self) =>
-                    index === self.findIndex((t) => t.name === tech.name)
-                )
-                .map((tech, index) => (
-                  <div
-                    key={`${tech.name}-${index}`}
-                    className="group flex flex-col items-center p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105"
-                    style={{ animationDelay: `${index * 50}ms` }}
-                  >
-                    <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center p-2 mb-2 group-hover:bg-white/20 transition-all duration-300">
-                      <Image
-                        src={tech.logo || placeholderLogo}
-                        alt={tech.name}
-                        width={48}
-                        height={48}
-                        title={tech.name}
-                      />
+              <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-10 gap-4">
+                {[...skills["Tech Stack (MERN)"], ...extraTechnologies]
+                  .filter(
+                    (tech, index, self) =>
+                      index === self.findIndex((t) => t.name === tech.name)
+                  )
+                  .map((tech, index) => (
+                    <div
+                      key={`${tech.name}-${index}`}
+                      className="group flex flex-col items-center p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                      style={{ animationDelay: `${index * 50}ms` }}
+                    >
+                      <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center p-2 mb-2 group-hover:bg-white/20 transition-all duration-300">
+                        <Image
+                          src={tech.logo || placeholderLogo}
+                          alt={tech.name}
+                          width={48}
+                          height={48}
+                          title={tech.name}
+                        />
+                      </div>
+                      <span className="text-xs text-gray-400 group-hover:text-white transition-colors duration-300 text-center">
+                        {tech.name}
+                      </span>
                     </div>
-                    <span className="text-xs text-gray-400 group-hover:text-white transition-colors duration-300 text-center">
-                      {tech.name}
-                    </span>
-                  </div>
-                ))}
-            </div>
-          </CardContent>
-        </Card>
+                  ))}
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
 
         {/* Certifications */}
-        <Card className="skill-card glass-card glass-shine">
-          <CardContent className="p-8">
-            <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
-              Certifications
-            </h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {certifications.map((cert, index) => (
-                <div
-                  key={cert}
-                  // variant="secondary"
-                  className=" bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-white border-cyan-400/30 px-4 py-2 text-sm hover:from-cyan-500/30 hover:to-purple-500/30 transition-all duration-300 rounded-sm "
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  {cert}
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <Card className="skill-card glass-card glass-shine">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
+                Certifications
+              </h3>
+              <div className="flex flex-wrap justify-center gap-3">
+                {certifications.map((cert, index) => (
+                  <div
+                    key={cert}
+                    // variant="secondary"
+                    className=" bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-white border-cyan-400/30 px-4 py-2 text-sm hover:from-cyan-500/30 hover:to-purple-500/30 transition-all duration-300 rounded-sm "
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    {cert}
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
       </div>
     </section>
   );

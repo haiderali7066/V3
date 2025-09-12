@@ -6,7 +6,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Portfolio App',
   description: 'Created by Haider',
-  generator: 'Developer',
+  generator: 'Haider Developers',
 }
 
 export default function RootLayout({
