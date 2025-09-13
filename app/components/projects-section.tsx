@@ -34,7 +34,7 @@ const fullStackProjects = [
       "A full-featured blog platform with authentication, post creation/editing, and MongoDB-backed API. Fully responsive UI and SEO-friendly.",
     image: "/projects/b.PNG",
     technologies: ["MERN", "JWT", "Cloudinary", "Tailwind CSS"],
-    liveUrl: "https://blog-frontend-h7yp.vercel.app/",
+    liveUrl: "https://haidersblog.vercel.app/",
     githubUrl: "https://github.com/haiderali7066/BlogFrontend",
     gradient: "from-green-500 to-emerald-600",
   },
