@@ -51,6 +51,85 @@ export default function ContactSection() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
+          
+
+          <div className="space-y-8">
+            
+
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <Card className="glass-card glass-shine bg-gradient-to-r from-green-500/20 to-blue-500/20 border-green-400/30">
+                <CardContent className="p-8 text-center">
+                  <h3 className="text-2xl font-bold mb-4 text-white">
+                    Hire Me Now!
+                  </h3>
+                  <p className="text-gray-300 mb-6">
+                    Ready to start your project? Contact me directly through
+                    your preferred platform
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button
+                      className="bg-green-500 hover:bg-green-600 text-white"
+                      onClick={() =>
+                        window.open(
+                          "https://wa.me/923256036838?text=Hello%20Haider!%20I%20want%20to%20discuss%20a%20project.",
+                          "_blank"
+                        )
+                      }
+                    >
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      WhatsApp
+                    </Button>
+                    <Button
+                      className="bg-blue-500 hover:bg-blue-600 text-white"
+                      onClick={() =>
+                        window.open(
+                          "https://t.me/haideraliqurban?text=Hello%20Haider!%20I%20am%20interested%20in%20working%20with%20you.",
+                          "_blank"
+                        )
+                      }
+                    >
+                      <Send className="w-4 h-4 mr-2" />
+                      Telegram
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div><motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <Card className="glass-card glass-shine bg-white/5 backdrop-blur-md border-white/10">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold mb-6 text-white">
+                    Contact Information
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-4">
+                      <Mail className="w-5 h-5 text-cyan-400" />
+                      <span className="text-gray-300">
+                        Haideraliqurban7066@gmail.com
+                      </span>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <Phone className="w-5 h-5 text-cyan-400" />
+                      <span className="text-gray-300">+92 325 6036 838</span>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <MapPin className="w-5 h-5 text-cyan-400" />
+                      <span className="text-gray-300">Lahore, Pakistan</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -107,84 +186,6 @@ export default function ContactSection() {
               </CardContent>
             </Card>
           </motion.div>
-
-          <div className="space-y-8">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <Card className="glass-card glass-shine bg-white/5 backdrop-blur-md border-white/10">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 text-white">
-                    Contact Information
-                  </h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-4">
-                      <Mail className="w-5 h-5 text-cyan-400" />
-                      <span className="text-gray-300">
-                        Haideraliqurban7066@gmail.com
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <Phone className="w-5 h-5 text-cyan-400" />
-                      <span className="text-gray-300">+92 325 6036 838</span>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <MapPin className="w-5 h-5 text-cyan-400" />
-                      <span className="text-gray-300">Lahore, Pakistan</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <Card className="glass-card glass-shine bg-gradient-to-r from-green-500/20 to-blue-500/20 border-green-400/30">
-                <CardContent className="p-8 text-center">
-                  <h3 className="text-2xl font-bold mb-4 text-white">
-                    Hire Me Now!
-                  </h3>
-                  <p className="text-gray-300 mb-6">
-                    Ready to start your project? Contact me directly through
-                    your preferred platform
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button
-                      className="bg-green-500 hover:bg-green-600 text-white"
-                      onClick={() =>
-                        window.open(
-                          "https://wa.me/923256036838?text=Hello%20Haider!%20I%20want%20to%20discuss%20a%20project.",
-                          "_blank"
-                        )
-                      }
-                    >
-                      <MessageCircle className="w-4 h-4 mr-2" />
-                      WhatsApp
-                    </Button>
-                    <Button
-                      className="bg-blue-500 hover:bg-blue-600 text-white"
-                      onClick={() =>
-                        window.open(
-                          "https://t.me/haideraliqurban?text=Hello%20Haider!%20I%20am%20interested%20in%20working%20with%20you.",
-                          "_blank"
-                        )
-                      }
-                    >
-                      <Send className="w-4 h-4 mr-2" />
-                      Telegram
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
         </div>
       </div>
     </section>
