@@ -51,11 +51,11 @@ const fullStackProjects = [
   {
     title: "E-commerce Store",
     description:
-      "A productivity web app for managing daily tasks, built with MERN stack and JWT auth. Includes user registration, task CRUD, and filters.",
-    image: "https://fullstack-tasker-app.vercel.app/preview.PNG",
+      "A productivity web app for Furniture store, built with MERN stack and JWT auth. Includes user registration, task CRUD, and filters.",
+    image: "/projects/f2.PNG",
     technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-    liveUrl: "https://fullstack-tasker-app.vercel.app/",
-    githubUrl: "https://github.com/haiderali7066/Fullstack-tasker-app",
+    liveUrl: "https://furniture-store1.vercel.app/",
+    githubUrl: "https://github.com/haiderali7066/Furniture-store",
     gradient: "from-blue-500 to-cyan-600",
   },
 ];
