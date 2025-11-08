@@ -1,0 +1,15 @@
+# robots.txt for Haider's Portfolio
+
+User-agent: *
+Allow: /
+
+# Prevent crawlers from indexing temporary or private folders (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Sitemap helps search engines find all pages faster
+Sitemap: https://haiders-portfolio-v3.vercel.app/sitemap.xml
+
+# Host
+Host: https://haiders-portfolio-v3.vercel.app
